@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taxi Services - Travel Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 120px;
+      background-color: #f8f9fa;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 20px 0;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hero-section {
+      height: 100vh;
+      background-size: cover;
+     background-image: url("../assest/images/tour travel.webp");
+      background-position: center;
+    }
+
+    .content-section {
+      padding: 60px 30px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar d-none d-md-block">
+    <a href="#">Home</a>
+    <a href="#">Destination</a>
+    <a href="#">Packages</a>
+    <a href="#">Booking</a>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-section d-flex align-items-center justify-content-center text-white text-center">
+    <h1 class="display-4 bg-dark bg-opacity-50 p-3 rounded"></h1>
+  </div>
+    <!-- Main Content -->
+    
+   <div class="container content-section">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+          <h3>Explore the world with our tour packages</h3>
+          <p>
+            Whether you are dreaming of beaches, mountains, historical cities or hidden gems – our curated tour packages offer affordable, all-in-one travel solutions to make your trip easy and unforgettable.
+          </p>
+
+          <h2>What's included in our tour packages?</h2>
+          <ul>
+            <li>Hotel Accommodation</li>
+            <li>Local Transport</li>
+            <li>Daily Breakfast/All Meals</li>
+            <li>Professional tour guide</li>
+          </ul>
+
+          <h5 class="mt-4">Popular Tour Packages:</h5>
+          <p><strong>Himachal Delight:</strong> Explore Shimla, Manali. 5N/6D stay in 3-star resorts, guided tour and river rafting included.</p>
+          <p><strong>Goa Beach Escape:</strong> Beachside resort stay, water sports, North and South Goa tour, and party nights.</p>
+          <p><strong>Golden Triangle:</strong> Delhi, Agra & Jaipur tour. Taj Mahal, forts, palaces, and cultural walks.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="../assest/images/package.jpg" class="img-fluid tour-img" alt="Tour Collage">
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer-->
+<footer>
+        <footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <p>Brief description of your website or company.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="clothing.html" class="text-white">Home</a></li>
+          <li><a href="" class="text-white">About</a></li>
+          <li><a href="#" class="text-white">Services</a></li>
+          <li><a href="#" class="text-white">Contact </a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://www.facebook.com" class="text-white"><i class="fab fa-facebook fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.twitter.com" class="text-white"><i class="fab fa-twitter fa-2x"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.instagram.com" class="text-white"><i class="fab fa-instagram fa-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="bg-light">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="mb-0">&copy; 2025 travelling with us. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+    </footer>
+
+</body>
+</html>

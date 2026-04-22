@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Website</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #fff;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Sections */
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    /* Hero */
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      background: #3498db;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Destinations */
+    .destinations {
+      text-align: center;
+      padding: 40px;
+      background: #f2f2f2;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: stretch; /* FIX */
+      flex-wrap: wrap; /* responsive */
+    }
+
+    .card {
+      background: white;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;       /* FIX */
+      object-fit: cover;   /* FIX */
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+    }
+
+    /* Booking Form */
+    .form-container {
+      background: white;
+      padding: 30px;
+      width: 320px;
+      margin: 80px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px;
+      width: 100%;
+      background: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a class="navbar-brand" href="#"><img src="../assest/images/logo.jpg" alt="Logo" width="70" /></a>
+    <ul>
+      <li><a onclick="showSection('home')">Home</a></li>
+      <li><a onclick="showSection('home')">Destination</a></li>
+      <li><a onclick="showSection('home')">Offers</a></li>
+      <li><a onclick="showSection('booking')">Booking</a></li>
+    </ul>
+  </div>
+
+  <!-- HOME SECTION -->
+  <div id="home" class="section active">
+
+    <div class="hero">
+      <h1>Your Dream Destination Awaits</h1>
+      <p>Explore the world with comfort and style</p>
+      <button onclick="showSection('booking')">Book Now</button>
+    </div>
+
+    <div class="destinations">
+      <h2>Popular Destinations</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+          <h3>Goa</h3>
+          <p>Enjoy beautiful beaches</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+          <h3>Manali</h3>
+          <p>Snowy mountain escape</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41">
+          <h3>Jaipur</h3>
+          <p>Royal heritage city</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOOKING SECTION -->
+  <div id="booking" class="section">
+
+    <div class="form-container">
+      <h2>Booking Form</h2>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="date" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <br>
+      <button onclick="showSection('home')">Back to Home</button>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Traveling | All Rights Reserved
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
